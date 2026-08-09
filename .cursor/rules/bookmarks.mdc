@@ -1,0 +1,36 @@
+---
+description: >-
+  How to add or organize links in research/bookmarks.md.
+  Use when the user provides URLs, bookmarks, favorites, or asks to update
+  research/bookmarks.md.
+globs: research/bookmarks.md
+alwaysApply: false
+---
+
+# Bookmarks file
+
+Target file: `research/bookmarks.md`
+
+## When to apply
+
+Use this rule only when adding, editing, or organizing links in that file.
+Do not load or invent bookmark work unless the user provides links or asks for it.
+
+## Format
+
+- Persist content in **English** (titles and any notes)
+- One link per bullet: `- [Short title](https://example.com)` — optional trailing note after an em dash
+- Keep sections; add a new `## Section` only when none of the existing ones fit
+- Default sections: `Official / test info`, `Practice`, `Hiring process`
+- Place each link in the best-fitting section; ask only if placement is ambiguous
+- Remove placeholder bullets (`- ...`) in a section once it has real links
+- Do not duplicate an existing URL; if the title is better, update the existing line
+- Keep the file short and scannable — no fluff, no long descriptions
+
+## Placement guide
+
+| Section | Use for |
+|---------|---------|
+| Official / test info | Criteria/CCAT docs, format, scoring, official vendor pages |
+| Practice | Drills, mocks, sample questions, timed practice tools |
+| Hiring process | Role, company, application portal, process-specific links |

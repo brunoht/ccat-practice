@@ -1,0 +1,49 @@
+---
+description: >-
+  After meaningful work, append a short high-level entry to
+  journal/session-buffer.md. Always apply in every session.
+alwaysApply: true
+---
+
+# Session buffer
+
+Target file: `journal/session-buffer.md`
+
+## When to append
+
+At the **end of a turn** that produced meaningful progress, append **one** short entry:
+
+- Repo edits, new or updated study materials
+- Strategy decisions worth tracking
+- Practice outcomes worth tracking (e.g. mock results, weak-area notes)
+
+## When to skip
+
+Do **not** append for:
+
+- Pure clarifications or Q&A with no durable outcome
+- Failed or aborted work
+- Turns that only read files or planned without changing anything
+- Diary consolidation itself (handled by the diary rule)
+
+## Format
+
+- Persist in **English**
+- High-level actions only — not chat transcripts or full Q&A
+- Bullets, not paragraphs; do not invent progress
+- Append at the end of the file (keep the purpose header)
+
+```markdown
+### YYYY-MM-DD — short label
+- Area: project | study (verbal/numerical/spatial) | process
+- Done: …
+- Evolved: … (vs prior state, if clear)
+- Next (optional): …
+```
+
+## Do not
+
+- Dump verbatim questions and answers
+- Duplicate the same turn under multiple headings
+- Edit or rewrite older buffer entries unless fixing a clear mistake
+- Write diary entries here — use `journal/diary.md` only via the diary rule when the user asks

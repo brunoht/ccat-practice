@@ -1,0 +1,54 @@
+---
+description: >-
+  Consolidate journal/session-buffer.md into journal/diary.md when the user
+  asks to update diary, write diary, consolidate journal, or add a diary entry.
+alwaysApply: false
+---
+
+# Diary consolidation
+
+Target files: `journal/diary.md` (write), `journal/session-buffer.md` (read then clear)
+
+## When to apply
+
+Only when the user asks to consolidate the journal into the diary (e.g. update diary, write diary, consolidate journal, diary entry).
+Do not consolidate unprompted.
+
+## Steps
+
+1. Read `journal/session-buffer.md` and the latest entry in `journal/diary.md` (if any)
+2. If the buffer has no real entries beyond the header, say so and stop — do not invent an entry
+3. Append **one** new diary entry summarizing what evolved since the last diary (project + study), not a dump of every buffer bullet
+4. Clear the buffer: keep the purpose header and note that it was cleared after this diary date
+
+## Diary entry format
+
+- Persist in **English**
+- Short and scannable; bullets, not paragraphs
+
+```markdown
+## YYYY-MM-DD
+- Project: …
+- Study: …
+- Gaps / focus next: …
+```
+
+Omit a bullet only when that dimension had nothing to report.
+
+## Buffer after clear
+
+Replace `journal/session-buffer.md` with:
+
+```markdown
+# Session buffer
+
+Temporary append-only log of meaningful agent work. Consolidated into `diary.md` on request, then cleared.
+
+Buffer cleared after diary YYYY-MM-DD.
+```
+
+## Do not
+
+- Copy every buffer bullet verbatim into the diary
+- Leave consumed buffer entries in place after a successful consolidation
+- Create a diary entry when the buffer is empty
