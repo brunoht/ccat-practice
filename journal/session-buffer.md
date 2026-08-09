@@ -47,3 +47,9 @@ Temporary append-only log of meaningful agent work. Consolidated into `diary.md`
 - Done: Reviewed full repo + prior session transcripts; backfilled session-buffer with all meaningful work from today (bootstrap through journal rules)
 - Evolved: Buffer now covers project setup history; study practice still not started beyond bookmarking a prep course
 - Next: When ready, ask to consolidate into `journal/diary.md`; begin timed practice / diagnosis
+
+### 2026-08-09 — git remote initialized
+- Area: project
+- Done: Initialized local git on `main`, added `.gitignore`, committed study hub bootstrap, pushed to https://github.com/brunoht/ccat-practice.git
+- Evolved: Local-only files → tracked repo synced with empty GitHub remote
+- Next: Continue study materials; commit as work accumulates
