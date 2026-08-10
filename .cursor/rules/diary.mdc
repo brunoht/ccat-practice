@@ -1,39 +1,87 @@
 ---
 description: >-
-  Consolidate journal/session-buffer.md into journal/diary.md when the user
-  asks to update diary, write diary, consolidate journal, or add a diary entry.
+  Consolidate journal/session-buffer.md into journal/diary/YYYY-MM-DD.md when
+  the user asks to update diary, write diary, consolidate journal, or add a
+  diary entry.
+globs: journal/diary/**
 alwaysApply: false
 ---
 
 # Diary consolidation
 
-Target files: `journal/diary.md` (write), `journal/session-buffer.md` (read then clear)
+Target folder: `journal/diary/` (write one file per day)
+
+Also read (do not clear): `journal/session-buffer.md`, and `journal/reflections/YYYY-MM-DD.md` for each day being written.
 
 ## When to apply
 
 Only when the user asks to consolidate the journal into the diary (e.g. update diary, write diary, consolidate journal, diary entry).
 Do not consolidate unprompted.
 
+## Layout
+
+- One file per calendar day: `journal/diary/YYYY-MM-DD.md`
+- Keep `journal/diary/README.md` as the folder convention only — do not dump day content there
+- Never use a single combined `journal/diary.md`
+
 ## Steps
 
-1. Read `journal/session-buffer.md` and the latest entry in `journal/diary.md` (if any)
-2. If the buffer has no real entries beyond the header, say so and stop — do not invent an entry
-3. Append **one** new diary entry summarizing what evolved since the last diary (project + study), not a dump of every buffer bullet
-4. Clear the buffer: keep the purpose header and note that it was cleared after this diary date
+1. Read `journal/session-buffer.md`. List existing `journal/diary/YYYY-MM-DD.md` files (ignore README) to see what was already consolidated
+2. If the buffer has no real entries beyond the header, say so and stop — do not invent entries
+3. Group buffer entries by calendar day (`### YYYY-MM-DD — …`). Only days with real buffer content get a diary file
+4. For each of those days:
+   - Read `journal/reflections/YYYY-MM-DD.md` when it exists
+   - Create `journal/diary/YYYY-MM-DD.md` if missing; if it exists, refine the summary bullets only — do not wipe the file or rewrite already-appended buffer blocks
+   - Write/update a short summary for **that day only** at the top (project + study + self-management from that day’s reflection when present)
+   - **Move** that day’s buffer entries to the **end** of the same day’s diary file: cut from `session-buffer.md` and append **unchanged** (same `###` headings and bullets). Do not rewrite, reorder, summarize, or drop entries when moving
+5. After all day files for this consolidation are written, clear consumed entries from the buffer (they now live in the diary files). Keep the purpose header and note that it was cleared after this consolidation (latest diary date written). If consolidating only some days, leave other days’ buffer entries in place
 
-## Diary entry format
+## What to evaluate from reflections
+
+Use that day’s reflection only as evidence for durable process signals. Evaluate these axes when the file supports them; omit axes with no signal:
+
+| Axis | Ask |
+|------|-----|
+| Regulation | Did worry/overwhelm turn into a concrete plan or action, or derail study? |
+| Load / boundaries | Did study volume, timeboxing, or mix with other work change? |
+| Gap loop | Did they name a gap and choose a sustainable next step (vs deadline pressure only)? |
+| Habit / process | Is there a routine or tool change worth tracking over time? |
+
+Quality check for each day file: the **summary** should answer *what changed in how they study or manage themselves, and which gap stays open with a clear response* — not *how they felt*. The **appended buffer block** is the full objective log for that day.
+
+Do **not** invent self-management content when that day’s reflection is missing. Do **not** copy mood narratives or raw perception bullets into the diary.
+
+## Diary file format
 
 - Persist in **English**
-- Short and scannable; bullets, not paragraphs
+- Two parts per day file: (1) short summary at the top; (2) that day’s raw session-buffer entries appended at the end, unmodified
 
 ```markdown
-## YYYY-MM-DD
+# Diary — YYYY-MM-DD
+
+Objective progress for this day. Written from `session-buffer.md` when requested. Complements `journal/reflections/YYYY-MM-DD.md` (perceptions).
+
 - Project: …
 - Study: …
+- Self-management: …
 - Gaps / focus next: …
+
+### YYYY-MM-DD — short label
+- Area: …
+- Done: …
+- Evolved: …
+- Next (optional): …
+
+### YYYY-MM-DD — another entry
+…
 ```
 
-Omit a bullet only when that dimension had nothing to report.
+- **Project / Study:** synthesized from that day’s session-buffer entries (objective work)
+- **Self-management:** 1–2 lines synthesizing regulation + load/boundaries (+ habit if durable); omit if no reflection signal for that day
+- **Gaps / focus next:** content gaps from that day’s buffer crossed with how they are addressing them (from that day’s reflection when available); leave open items explicit
+- **Buffer appendix:** every `### YYYY-MM-DD — …` block for that day, moved from the buffer with no edits
+
+Omit a summary bullet only when that dimension had nothing to report.
 
 ## Buffer after clear
 
@@ -42,13 +90,20 @@ Replace `journal/session-buffer.md` with:
 ```markdown
 # Session buffer
 
-Temporary append-only log of meaningful agent work. Consolidated into `diary.md` on request, then cleared.
+Temporary append-only log of meaningful agent work. Consolidated into `journal/diary/YYYY-MM-DD.md` on request, then cleared.
 
-Buffer cleared after diary YYYY-MM-DD.
+Buffer cleared after diary consolidation through YYYY-MM-DD.
 ```
+
+Use the latest diary date written in this consolidation for `YYYY-MM-DD`.
+
+When only some days were consolidated, keep the header plus any remaining unconsolidated `###` entries (do not delete other days’ work).
 
 ## Do not
 
-- Copy every buffer bullet verbatim into the diary
-- Leave consumed buffer entries in place after a successful consolidation
-- Create a diary entry when the buffer is empty
+- Merge multiple calendar days into one diary file
+- Summarize away or rewrite buffer entries when moving them — append that day’s blocks verbatim at the end of the matching diary file
+- Dump raw mood/perception text from reflections into the diary (keep that in `journal/reflections/`; Self-management is a short synthesis only)
+- Leave consumed buffer entries in the buffer after a successful move into the diary
+- Create diary files when the buffer is empty
+- Clear or rewrite reflection files during consolidation

@@ -17,8 +17,11 @@ Rules in `.cursor/rules/` (do not copy their details here):
 | Rule | When to use |
 |------|-------------|
 | [session-buffer](.cursor/rules/session-buffer.mdc) | Always — append a short entry to `journal/session-buffer.md` after meaningful work |
-| [diary](.cursor/rules/diary.mdc) | When consolidating the session buffer into `journal/diary.md` |
+| [diary](.cursor/rules/diary.mdc) | When consolidating the session buffer into `journal/diary/YYYY-MM-DD.md` |
+| [reflections](.cursor/rules/reflections.mdc) | When writing subjective day perceptions under `journal/reflections/` |
 | [bookmarks](.cursor/rules/bookmarks.mdc) | Adding or organizing links in `research/bookmarks.md` |
+| [theory-notes](.cursor/rules/theory-notes.mdc) | Creating or editing concept notes under `notes/**/theory/` |
+| [ccat-simulator-tests](.cursor/rules/ccat-simulator-tests.mdc) | Creating or editing practice test JSON under `projects/ccat-simulator/tests/` |
 
 ## Architecture
 
@@ -37,7 +40,7 @@ Rules in `.cursor/rules/` (do not copy their details here):
 - Cite sources in `research/` when claims depend on external info
 - Align new material with CCAT areas: verbal, numerical, spatial/logic
 - Update `README.md` only when structure or purpose meaningfully changes
-- After meaningful work, append to `journal/session-buffer.md`; write `journal/diary.md` only when the user asks (see rules)
+- After meaningful work, append to `journal/session-buffer.md`; write `journal/diary/YYYY-MM-DD.md` only when the user asks (see rules)
 
 ## Agent behavior
 

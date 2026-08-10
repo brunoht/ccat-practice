@@ -1,0 +1,77 @@
+---
+description: >-
+  How to create or edit practice test JSON for the CCAT simulator.
+  Use when adding mocks/drills under projects/ccat-simulator/tests/, or when
+  the user asks for a new simulator test / timed mock JSON.
+globs: projects/ccat-simulator/tests/**/*.json
+alwaysApply: false
+---
+
+# CCAT simulator tests
+
+**References:** `projects/ccat-simulator/tests/sample-short.json`, `multiplication-678.json`  
+**Validator:** `validateTest` in `projects/ccat-simulator/server.js`
+
+## Where files live
+
+- Path: `projects/ccat-simulator/tests/{slug}.json`
+- `{slug}`: kebab-case English (e.g. `sample-short`, `multiplication-678`)
+- Filename must match `^[a-zA-Z0-9._-]+\.json$` (server list/load safety)
+- Prefer `id` equal to the filename without `.json`
+- New files appear in the UI automatically after `npm start` — no code change
+
+## Schema
+
+```json
+{
+  "id": "my-drill",
+  "title": "Human-readable title",
+  "questions": [
+    {
+      "id": "q1",
+      "area": "numerical",
+      "stem": "Question text?",
+      "choices": ["A", "B", "C", "D"],
+      "answerIndex": 1
+    }
+  ]
+}
+```
+
+| Field | Rules |
+|-------|--------|
+| `id`, `title` | Non-empty strings |
+| `questions` | Non-empty array |
+| `questions[].id` | Non-empty string; unique within the file (`q1`, `q2`, … is fine) |
+| `questions[].area` | Exactly one of: `verbal`, `numerical`, `spatial`, `logic` |
+| `questions[].stem` | Non-empty string (English) |
+| `questions[].choices` | Array of ≥2 non-empty strings; prefer **4** choices (CCAT-like) |
+| `questions[].answerIndex` | Integer index into `choices` (0-based); must point at the correct choice |
+
+Malformed files are skipped in the test list or fail on load — always double-check `answerIndex` after writing choices.
+
+## Content guidelines
+
+- Persist **English only** (stems, choices, titles, filenames)
+- Match the user's goal: full mixed mock vs skill drill (one area / one skill is fine)
+- Keep stems short and scannable; no calculator-friendly multi-page setup
+- Distractors should be plausible (adjacent table facts, off-by-one, common misreads) — not random junk
+- Mix formats when useful: direct fact, missing term, short word problem, reverse operation
+- Suggested length: ~8–12 for smoke samples; ~20–30 for focused drills; up to ~50 for full-length pacing practice
+- Default pacing in the UI is ~18s/question (CCAT 15 min / 50); do not hardcode timing in the JSON
+
+## Checklist before finishing
+
+1. Every `answerIndex` matches the intended correct choice
+2. No duplicate identical stems unless intentional review pairs
+3. Areas tagged correctly for later attempt analytics
+4. Spot-check a few products/logic answers by hand
+5. Optional: load once via `GET /api/tests/{filename}` or start the simulator and select the new title
+
+## Do not
+
+- Put tests outside `projects/ccat-simulator/tests/`
+- Change `server.js` / UI just to register a new JSON file
+- Save Portuguese (or other non-English) into the JSON
+- Add fields the validator/UI do not use unless the user asks to extend the schema
+- Invent empty scaffolding or duplicate an existing drill under a new name

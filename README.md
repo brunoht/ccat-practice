@@ -33,12 +33,15 @@ Suggested layout (can evolve as study progresses):
 ccat-practice/
 ├── README.md                 # this file — purpose and what lives where
 ├── AGENTS.md                 # agent behavior, architecture, design decisions
-├── journal/                  # session buffer + consolidated diary (project & study progress)
+├── journal/                  # session buffer; diary/ and reflections/ (one file per day each)
 ├── notes/                    # notes, strategies, glossary
 ├── practice/                 # drills, exercises, timed mocks
+├── projects/                 # small local tools (e.g. timed simulator)
 ├── research/                 # research on the test, benchmarks, tips
 └── process/                  # questions and notes from the hiring process
 ```
+
+Timed browser mocks: see [`projects/ccat-simulator/`](projects/ccat-simulator/) (`npm install && npm start`).
 
 ### Suggested workflow
 

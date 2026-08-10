@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CCAT Practice Simulator</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <h1>CCAT Practice Simulator</h1>
+          <p class="subtitle">Timed mock under real-test constraints</p>
+        </div>
+        <div class="topbar-actions">
+          <label class="theme-label" for="theme-select">Theme</label>
+          <select id="theme-select" aria-label="Color theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </div>
+      </header>
+
+      <main>
+        <section id="screen-select" class="screen">
+          <h2>1. Choose a test</h2>
+          <p class="help">Select a JSON file from the tests directory.</p>
+          <div id="select-status" class="status" role="status"></div>
+          <label class="field-label" for="test-select">Available tests</label>
+          <select id="test-select" disabled>
+            <option value="">Loading…</option>
+          </select>
+          <div class="actions">
+            <button id="btn-next" type="button" disabled>Next</button>
+          </div>
+        </section>
+
+        <section id="screen-setup" class="screen hidden">
+          <h2>2. Review timing</h2>
+          <p id="setup-title" class="help"></p>
+          <dl class="stats">
+            <div>
+              <dt>Questions</dt>
+              <dd id="setup-count">—</dd>
+            </div>
+            <div>
+              <dt>Suggested seconds / question</dt>
+              <dd>
+                <input
+                  id="seconds-per-question"
+                  type="number"
+                  min="1"
+                  step="1"
+                  inputmode="numeric"
+                />
+              </dd>
+            </div>
+            <div>
+              <dt>Total time (seconds)</dt>
+              <dd>
+                <input
+                  id="total-seconds"
+                  type="number"
+                  min="1"
+                  step="1"
+                  inputmode="numeric"
+                />
+              </dd>
+            </div>
+            <div>
+              <dt>Total time (display)</dt>
+              <dd id="total-display">—</dd>
+            </div>
+          </dl>
+          <p class="help">
+            Real CCAT pacing: 15 minutes for 50 questions (~18 seconds each).
+            Adjust seconds per question or total time before starting.
+          </p>
+          <div class="actions">
+            <button id="btn-back-select" type="button" class="secondary">Back</button>
+            <button id="btn-start" type="button">Start</button>
+          </div>
+        </section>
+
+        <section id="screen-exam" class="screen hidden">
+          <div class="exam-bar">
+            <div>
+              Question <span id="exam-progress">1</span> /
+              <span id="exam-total">0</span>
+            </div>
+            <div class="timer" id="exam-timer" aria-live="polite">00:00</div>
+          </div>
+          <p id="exam-area" class="area-tag"></p>
+          <h2 id="exam-stem" class="stem"></h2>
+          <fieldset id="exam-choices" class="choices"></fieldset>
+          <div class="actions">
+            <button id="btn-confirm" type="button" disabled>Confirm &amp; next</button>
+          </div>
+        </section>
+
+        <section id="screen-results" class="screen hidden">
+          <h2>Results</h2>
+          <div id="results-summary" class="results-summary"></div>
+          <div id="results-save" class="status" role="status"></div>
+          <div class="actions">
+            <button id="btn-again" type="button">Practice again</button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>

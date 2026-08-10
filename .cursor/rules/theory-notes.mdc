@@ -1,0 +1,90 @@
+---
+description: >-
+  Format and structure for CCAT theory notes under notes/**/theory/.
+  Use when creating or editing theory concept notes (numerical, verbal, spatial).
+globs: notes/**/theory/**/*.md
+alwaysApply: false
+---
+
+# Theory notes
+
+**Reference:** `notes/numerical/theory/fraction-division.md`
+
+## Where files live
+
+- Path: `notes/{area}/theory/{topic}.md`
+- `{area}`: `numerical`, `verbal`, or `spatial` (CCAT areas)
+- `{topic}`: kebab-case English slug (e.g. `fraction-division`, `percent-change`)
+
+Create the `theory/` folder only when adding real content.
+
+## File template
+
+Follow this section order. Rename headings to fit the topic, but keep the same flow and tone.
+
+```markdown
+# {Topic Title}
+
+**Area:** {area} — theory
+**Added:** YYYY-MM-DD
+
+## What it means
+(one-sentence intuition — what question this concept answers)
+
+---
+
+## {Core method or main trick}
+(procedure, numbered steps, worked example)
+
+**One-line rule:** *short memorable sentence*
+
+---
+
+## Why it works (intuition)
+(concrete analogy — pizza slices, chocolate bar, etc.)
+
+---
+
+## Step-by-step examples
+### Example 1: `{expression}`
+(numbered steps)
+### Example 2: `{expression}`
+(numbered steps)
+
+---
+
+## Extra tricks
+(optional subsections — shortcuts, mental math, edge cases)
+
+---
+
+## Common mistakes
+| Wrong | Right |
+|-------|-------|
+| ... | ... |
+
+---
+
+## Pocket summary
+```
+{compact formula or rule}
+```
+1. ...
+```
+
+## Format rules
+
+- **English only** in persisted content (chat may be Portuguese)
+- **No LaTeX** — use plain math in backticks: `3/4`, `1 1/2`, `a/b × c/d` (standard markdown preview)
+- Separate major sections with `---`
+- Keep notes **short, scannable, actionable** — no fluff
+- Use **bold** for key terms; *italics* for one-line rules and guiding questions
+- Worked math and expressions: inline code (backticks), not `$...$` or `\(...\)`
+- Pocket summary: fenced code block for the compact rule, then a short numbered checklist
+- Common mistakes: table with concrete wrong vs right examples when applicable
+
+## Do not
+
+- Duplicate course/session notes — theory files teach the concept; link out instead of copying drill logs
+- Skip metadata (`Area`, `Added`) or the pocket summary
+- Invent empty `theory/` folders under every area

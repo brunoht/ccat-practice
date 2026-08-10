@@ -1,0 +1,67 @@
+{
+  "id": "sample-short",
+  "title": "Sample Short Mock",
+  "questions": [
+    {
+      "id": "q1",
+      "area": "numerical",
+      "stem": "What is 12% of 50?",
+      "choices": ["4", "6", "8", "12"],
+      "answerIndex": 1
+    },
+    {
+      "id": "q2",
+      "area": "verbal",
+      "stem": "Book is to Reading as Fork is to:",
+      "choices": ["Drawing", "Writing", "Stirring", "Eating"],
+      "answerIndex": 3
+    },
+    {
+      "id": "q3",
+      "area": "numerical",
+      "stem": "If 3x + 6 = 21, what is x?",
+      "choices": ["3", "5", "7", "9"],
+      "answerIndex": 1
+    },
+    {
+      "id": "q4",
+      "area": "logic",
+      "stem": "All roses are flowers. Some flowers fade quickly. Which conclusion must be true?",
+      "choices": [
+        "All roses fade quickly",
+        "Some roses fade quickly",
+        "No roses fade quickly",
+        "None of the above must be true"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "id": "q5",
+      "area": "spatial",
+      "stem": "A cube is painted on all sides, then cut into 27 equal smaller cubes. How many small cubes have paint on exactly 2 faces?",
+      "choices": ["0", "8", "12", "24"],
+      "answerIndex": 2
+    },
+    {
+      "id": "q6",
+      "area": "verbal",
+      "stem": "Which word is most nearly the opposite of SCARCE?",
+      "choices": ["Rare", "Abundant", "Limited", "Sparse"],
+      "answerIndex": 1
+    },
+    {
+      "id": "q7",
+      "area": "numerical",
+      "stem": "A recipe needs 2/3 cup of sugar. How much sugar is needed for 1.5 times the recipe?",
+      "choices": ["2/3 cup", "3/4 cup", "1 cup", "1 1/3 cups"],
+      "answerIndex": 2
+    },
+    {
+      "id": "q8",
+      "area": "spatial",
+      "stem": "In a sequence of shapes rotating 90° clockwise each step, if the current shape points up, where does the next shape point?",
+      "choices": ["Up", "Right", "Down", "Left"],
+      "answerIndex": 1
+    }
+  ]
+}

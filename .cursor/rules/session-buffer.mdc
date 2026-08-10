@@ -46,4 +46,4 @@ Do **not** append for:
 - Dump verbatim questions and answers
 - Duplicate the same turn under multiple headings
 - Edit or rewrite older buffer entries unless fixing a clear mistake
-- Write diary entries here — use `journal/diary.md` only via the diary rule when the user asks
+- Write diary entries here — use `journal/diary/YYYY-MM-DD.md` only via the diary rule when the user asks

@@ -1,0 +1,59 @@
+---
+description: >-
+  How to create or update daily perception notes under journal/reflections/.
+  Use when the user shares feelings, mood, energy, doubt, confidence, or asks
+  to write reflections / percepções for a study day.
+globs: journal/reflections/**
+alwaysApply: false
+---
+
+# Reflections (perceptions)
+
+Target folder: `journal/reflections/`
+
+Complements `journal/diary/`: reflections hold subjective perceptions (energy, confidence, doubt, overwhelm, load, what felt heavy or useful). Diary stays objective for project/study from the session buffer (one file per day); on consolidation it may **synthesize** a short Self-management bullet from that day’s reflection (regulation, load/boundaries, gap response, habits) — never a copy of mood text. See `.cursor/rules/diary.mdc`.
+
+## When to apply
+
+When the user shares how a study day felt, or asks to write/update reflections (including Portuguese: *percepções*, *anotações pessoais*, *como me senti*).
+
+Do **not** invent reflections unprompted. Do **not** put raw perceptions into `journal/diary/` or `session-buffer.md` (diary consolidation may summarize process signals only).
+
+## Layout
+
+- One file per calendar day: `journal/reflections/YYYY-MM-DD.md`
+- Keep `journal/reflections/README.md` as the folder convention only — do not dump day content there
+- Never use a single combined `journal/reflections.md`
+
+## Steps
+
+1. Identify the day(s) the user means (explicit date, “yesterday”, “today” — use the conversation’s current date)
+2. If they cover multiple days, use **one file per day**
+3. Create the file if missing; if it exists, append or refine bullets — do not wipe unrelated content
+4. If they mentioned a day but gave no content yet, ask for that day’s perceptions instead of inventing them
+
+## File format
+
+- Persist in **English** (chat may stay in Portuguese)
+- Short and scannable; bullets, not paragraphs
+- Capture mood/energy, what helped or hurt, confidence vs gaps, rest/boundaries — only what they said
+
+```markdown
+# Reflections — YYYY-MM-DD
+
+Personal perceptions for this day. Complements `journal/diary/YYYY-MM-DD.md` (objective progress).
+
+- Mood: …
+- Progress felt: …
+- Rest: … (optional)
+- Agents / process: … (optional)
+```
+
+Omit bullets that have nothing to report; rename or add bullets when their wording fits better (keep labels short).
+
+## Do not
+
+- Dump raw mood/perception bullets into `journal/diary/` or `session-buffer.md` (diary may synthesize Self-management only via the diary rule)
+- Merge multiple days into one file
+- Pad with fluff or interpret beyond what they shared
+- Duplicate the same day’s content across files
