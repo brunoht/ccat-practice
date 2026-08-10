@@ -1,0 +1,534 @@
+{
+  "testId": "multiplication-678",
+  "testTitle": "Multiplication Drill — 6, 7, 8",
+  "testFile": "multiplication-678.json",
+  "startedAt": "2026-08-10T03:34:23.895Z",
+  "finishedAt": "2026-08-10T03:37:00.465Z",
+  "durationSecondsConfigured": 432,
+  "durationSecondsUsed": 157,
+  "questionCount": 24,
+  "correctCount": 24,
+  "answeredCount": 24,
+  "unansweredCount": 0,
+  "accuracy": 1,
+  "averageMsPerQuestion": 6524,
+  "averageMsPerQuestionIncludingUnanswered": 6524,
+  "byArea": {
+    "numerical": {
+      "correct": 24,
+      "wrong": 0,
+      "unanswered": 0,
+      "total": 24
+    }
+  },
+  "answerKey": [
+    {
+      "questionId": "q1",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q2",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q3",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q4",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q5",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q6",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q7",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q8",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q9",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q10",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q11",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q12",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q13",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q14",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q15",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q16",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q17",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q18",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q19",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q20",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q21",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q22",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q23",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true
+    },
+    {
+      "questionId": "q24",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true
+    }
+  ],
+  "items": [
+    {
+      "questionId": "q1",
+      "area": "numerical",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true,
+      "timeMsSpent": 33624,
+      "stem": "What is 6 × 7?",
+      "choices": [
+        "36",
+        "42",
+        "48",
+        "49"
+      ]
+    },
+    {
+      "questionId": "q2",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 3720,
+      "stem": "What is 7 × 8?",
+      "choices": [
+        "48",
+        "54",
+        "56",
+        "64"
+      ]
+    },
+    {
+      "questionId": "q3",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 3608,
+      "stem": "What is 8 × 6?",
+      "choices": [
+        "42",
+        "46",
+        "48",
+        "54"
+      ]
+    },
+    {
+      "questionId": "q4",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 4335,
+      "stem": "A box holds 8 packs. Each pack has 7 batteries. How many batteries are in the box?",
+      "choices": [
+        "49",
+        "54",
+        "56",
+        "64"
+      ]
+    },
+    {
+      "questionId": "q5",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 6991,
+      "stem": "Which number completes the equation: ? × 6 = 54?",
+      "choices": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "questionId": "q6",
+      "area": "numerical",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true,
+      "timeMsSpent": 4635,
+      "stem": "What is 7 × 9?",
+      "choices": [
+        "56",
+        "63",
+        "72",
+        "81"
+      ]
+    },
+    {
+      "questionId": "q7",
+      "area": "numerical",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true,
+      "timeMsSpent": 3698,
+      "stem": "What is 8 × 8?",
+      "choices": [
+        "56",
+        "64",
+        "72",
+        "81"
+      ]
+    },
+    {
+      "questionId": "q8",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 5370,
+      "stem": "A worker completes 6 forms per hour for 8 hours. How many forms in total?",
+      "choices": [
+        "42",
+        "46",
+        "48",
+        "54"
+      ]
+    },
+    {
+      "questionId": "q9",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 5445,
+      "stem": "What is 56 ÷ 7?",
+      "choices": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "questionId": "q10",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 5115,
+      "stem": "What is 6 × 8?",
+      "choices": [
+        "42",
+        "46",
+        "48",
+        "54"
+      ]
+    },
+    {
+      "questionId": "q11",
+      "area": "numerical",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true,
+      "timeMsSpent": 6368,
+      "stem": "Which number completes the equation: 7 × ? = 42?",
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "questionId": "q12",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 4470,
+      "stem": "A shelf has 7 rows of books with 8 books in each row. How many books are on the shelf?",
+      "choices": [
+        "48",
+        "54",
+        "56",
+        "63"
+      ]
+    },
+    {
+      "questionId": "q13",
+      "area": "numerical",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true,
+      "timeMsSpent": 5236,
+      "stem": "What is 8 × 9?",
+      "choices": [
+        "63",
+        "72",
+        "81",
+        "88"
+      ]
+    },
+    {
+      "questionId": "q14",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 8227,
+      "stem": "What is 48 ÷ 6?",
+      "choices": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "questionId": "q15",
+      "area": "numerical",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true,
+      "timeMsSpent": 6803,
+      "stem": "A store sells 6 binders for $7 each. What is the total cost?",
+      "choices": [
+        "$36",
+        "$42",
+        "$48",
+        "$49"
+      ]
+    },
+    {
+      "questionId": "q16",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 4597,
+      "stem": "What is 7 × 7?",
+      "choices": [
+        "42",
+        "48",
+        "49",
+        "56"
+      ]
+    },
+    {
+      "questionId": "q17",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 5596,
+      "stem": "Which number completes the equation: ? × 8 = 64?",
+      "choices": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    },
+    {
+      "questionId": "q18",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 9278,
+      "stem": "A factory packs 8 items per carton. How many items are in 7 cartons?",
+      "choices": [
+        "48",
+        "54",
+        "56",
+        "63"
+      ]
+    },
+    {
+      "questionId": "q19",
+      "area": "numerical",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true,
+      "timeMsSpent": 6135,
+      "stem": "What is 6 × 9?",
+      "choices": [
+        "48",
+        "54",
+        "56",
+        "63"
+      ]
+    },
+    {
+      "questionId": "q20",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 4800,
+      "stem": "What is 72 ÷ 8?",
+      "choices": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "questionId": "q21",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 4658,
+      "stem": "A team of 8 people each works 6 hours. How many person-hours is that?",
+      "choices": [
+        "42",
+        "46",
+        "48",
+        "54"
+      ]
+    },
+    {
+      "questionId": "q22",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 4373,
+      "stem": "Which number completes the equation: 6 × ? = 42?",
+      "choices": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ]
+    },
+    {
+      "questionId": "q23",
+      "area": "numerical",
+      "selectedIndex": 2,
+      "correctIndex": 2,
+      "isCorrect": true,
+      "timeMsSpent": 4252,
+      "stem": "What is 8 × 7?",
+      "choices": [
+        "49",
+        "54",
+        "56",
+        "63"
+      ]
+    },
+    {
+      "questionId": "q24",
+      "area": "numerical",
+      "selectedIndex": 1,
+      "correctIndex": 1,
+      "isCorrect": true,
+      "timeMsSpent": 5236,
+      "stem": "A printer prints 7 pages per minute. How many pages in 9 minutes?",
+      "choices": [
+        "56",
+        "63",
+        "72",
+        "81"
+      ]
+    }
+  ],
+  "savedAt": "2026-08-10T03:37:00.467Z",
+  "filename": "attempt-20260810-003700.json"
+}
