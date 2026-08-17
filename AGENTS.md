@@ -9,6 +9,7 @@ Do not duplicate content across `README.md`, this file, and on-demand rules.
 | `README.md` | Project purpose, what this repo is, and what to expect in files and directories |
 | `AGENTS.md` | Project architecture for agents, design decisions, and global agent behavior |
 | `.cursor/rules/` | Always-apply and on-demand rules (formats and workflows live in the rule files) |
+| `.cursor/skills/` | Project agent skills (how the agent coaches; do not copy skill text here) |
 
 When purpose, layout, or expected contents change, update `README.md`. When agent rules, architecture constraints, or design decisions change, update this file. Prefer linking or referring to the other file over copying.
 
@@ -22,6 +23,12 @@ Rules in `.cursor/rules/` (do not copy their details here):
 | [bookmarks](.cursor/rules/bookmarks.mdc) | Adding or organizing links in `research/bookmarks.md` |
 | [theory-notes](.cursor/rules/theory-notes.mdc) | Creating or editing concept notes under `notes/**/theory/` |
 | [ccat-simulator-tests](.cursor/rules/ccat-simulator-tests.mdc) | Creating or editing practice test JSON under `projects/ccat-simulator/tests/` |
+
+Skills in `.cursor/skills/` (do not copy their details here):
+
+| Skill | When to use |
+|-------|-------------|
+| [ccat-16s](.cursor/skills/ccat-16s/SKILL.md) | 16-second read/answer coaching for any CCAT type; practice drills go to the simulator (see ccat-simulator-tests) |
 
 ## Architecture
 
